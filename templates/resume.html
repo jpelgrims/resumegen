@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<style>
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-size: 1em;
+}
+
+html {
+    padding: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 100ch;
+    min-width: 100ch;
+    margin: auto;
+}
+
+header {
+    height: 60px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    width: 100%;
+    border-bottom: 1px solid black;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+header > #Title {
+    list-style-type: none;
+    float:left;
+}
+
+header > #Title > #Telephone {
+    font-size: 1.3em;
+}
+
+header > #Info {
+    float: right;
+    list-style-type: none;
+    text-align: right;
+}
+
+.list {
+    margin-left: 25px;
+}
+
+.list > li {
+    height: 60px;
+    font-size: 1.2em;
+}
+
+.list:nth-of-type(2) > li {
+    height: 100px;
+}
+
+.list > li > ul {
+    list-style-type: none;
+}
+
+.list > li > ul:first-child{
+    float:left;
+    max-width: 80%;
+}
+
+.list > li > ul:nth-child(2){
+    float:right;
+    text-align: right;
+}
+
+main > ul {
+    margin-left: 25px;
+}
+
+main > ul:nth-of-type(3) {
+    font-size: 1.2em;
+}
+
+</style>
+<html>
+    <head>
+        <title>Jelle Pelgrims' Resume</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <ul id="Title">
+                <li><h1>{{name}}</h1></li>
+                <li id="Telephone">{{phone}}</li>
+            </ul>
+            <ul id="Info">
+                <li><a href="https://{{website}}">{{website}}</a></li>
+                <li><a href="mailto://{{email}}">{{email}}</a></li>
+                <li><a href="https://{{github}}">{{github}}</a></li>
+            </ul>
+        </header>
+
+        <main>
+            <h2>Opleiding</h2>
+            <ul class="list">
+                {% for item in education_items %}
+                <li>
+                    <ul>
+                        <li><h3>{{item["Name"]}}</h3></li>
+                        <li><i>{{item["Title"]}}</i></li>
+                    </ul>
+                    <ul>
+                        <li>{{item["Location"]}}</li>
+                        <li><i>{{item["Period"]}}</i></li>
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <h2>Ervaring</h2>
+            <ul class="list">
+                {% for item in experience_items %}
+                <li>
+                    <ul>
+                        <li><h3>{{item["Name"]}}</h3></li>
+                        <li><i>{{item["Title"]}}</i></li>
+                        <li>{{item["Description"]}}</li>
+                    </ul>
+                    <ul>
+                        <li>{{item["Location"]}}</li>
+                        <li><i>{{item["Period"]}}</i></li>
+                        <li></li>
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <h2>Vaardigheden</h2>
+            <ul>
+                {% for n in skill_items %}
+                <li>{{n}}</li>
+                {% endfor %}
+            </ul>
+        </main>
+
+        <footer>
+
+        </footer>
+    </body>
+</html>

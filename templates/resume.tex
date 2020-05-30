@@ -1,0 +1,114 @@
+\documentclass[final,a4paper,notitlepage,10pt]{article}
+
+\usepackage[\VAR{language}]{babel} % Set document language to dutch
+\usepackage[utf8]{inputenc}	% UTF-8 encoding
+\usepackage[T1]{fontenc}
+\usepackage[paper=a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm,noheadfoot]{geometry} % Margins
+\usepackage[hidelinks]{hyperref} % hyperref for linking references for pdf
+\usepackage{titlesec} % For \titlerule command
+\usepackage{enumitem} % Package to compact itemize lists
+
+% Setuo %\VAR{other["experience_heading"]}
+
+\thispagestyle{empty} % Remove page number
+\hypersetup{colorlinks,urlcolor=[RGB]{0,0,139}} % Color all hyperlinks
+\raggedbottom
+\raggedright
+
+% Commands %
+
+% Mailto command
+\newcommand{\mailto}[1]{\href{mailto:#1}{#1}}
+
+% Header
+\newcommand{\resumeHeader}[5]{
+    \textbf{\Large #1} \hfill \href{https://#3}{#3} \\
+    #2 \hfill \mailto{#5} \\
+    \hfill \href{https://#4}{#4} \\
+    \vspace{-10pt}
+}
+
+% Section titles
+\newcommand{\resumeSection}[1]{
+    \section*{\large \scshape #1}
+    \vspace{-10pt}
+    \titlerule
+    \vspace{10pt}
+}
+
+% Resume list items
+\newcommand{\resumeItem}[4]{
+    \item \bf{#1} \hfill \textnormal{#2} \\ \it{#3} \hfill \it{#4} \\ \vspace{2pt}
+}
+
+% Resume experience list items
+\newcommand{\experienceItem}[5] {
+    \item \bf{#1} \hfill \textnormal{#2} \\ \it{#3} \hfill \it{#4} \hspace{-10pt} \\ \vspace{2pt} \textnormal{#5}
+}
+
+% Sections formatting
+
+\begin{document}
+
+\resumeHeader{\VAR{information["name"]}}{\VAR{information["phone"]}}{\VAR{information["website"]}}{\VAR{information["github"]}}{\VAR{information["e-mail"]}}
+
+\resumeSection{\VAR{other["experience_heading"]}}
+
+\setlist{itemsep=15pt,parsep=0pt}
+\begin{itemize}[leftmargin=5mm]
+    %% for item in experience_items
+    \experienceItem
+        {\VAR{item["institution"]}}{\VAR{item["location"]}}
+        {\VAR{item["title"]}}{\VAR{item["period"]}}
+        {\VAR{item["description"]}}
+
+    %% if 'achievements' in item
+    \vspace{-2pt}
+    \setlist{itemsep=2pt,parsep=0pt}
+    \begin{itemize}
+    %% for subitem in item["achievements"]
+    \item \textnormal{\VAR{subitem}}
+    %% endfor
+    \end{itemize}
+    %% endif
+    
+    %% endfor
+\end{itemize}
+
+\resumeSection{\VAR{other["education_heading"]}}
+
+\setlist{itemsep=15pt,parsep=0pt}
+\begin{itemize}[leftmargin=5mm]
+    %% for item in education_items
+    \resumeItem
+        {\VAR{item["institution"]}}{\VAR{item["location"]}}
+        {\VAR{item["title"]}}{\VAR{item["period"]}}
+    
+    %% if 'comments' in item
+    \vspace{-5pt}
+    \setlist{itemsep=2pt,parsep=0pt}
+    \begin{itemize}
+    %% for subitem in item["comments"]
+    \item \textnormal{\VAR{subitem}}
+    %% endfor
+    \end{itemize}
+    %% endif
+
+    %% endfor
+\end{itemize}
+
+\resumeSection{\VAR{other["skills_heading"]}}
+
+\setlist{itemsep=1pt,parsep=0pt}
+\begin{itemize}
+%% for item in skill_items
+\item \VAR{item}
+%% endfor
+\end{itemize}
+
+\vspace{4mm}
+\hrule
+\vspace{2mm}
+\hfill \small \VAR{other["last_changed_text"]} \small{\today}
+
+\end{document}

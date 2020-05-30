@@ -1,0 +1,98 @@
+{
+    "language": "dutch",
+    "output_formats": ["tex"],
+    "information": {
+        "name": "Jelle Pelgrims",
+        "phone": "+32 491 93 25 84",
+        "website": "www.jellepelgrims.com",
+        "e-mail": "contact@jellepelgrims.com",
+        "github": "github.com/jpelgrims"
+    },
+    "other": {
+        "education_heading": "Opleiding",
+        "experience_heading": "Ervaring",
+        "skills_heading": "Vaardigheden",
+        "last_changed_text": "Dit document werd laatst aangepast op"
+    },
+    "education": [
+        {
+            "institution": "University Colleges Leuven-Limburg",
+            "title": "Professionele Bachelor in de Toegepaste Informatica",
+            "location": "Haasrode, België",
+            "period": "2017 - 2020",
+            "comments": [
+                "Erasmusprogramma in Finland tijdens 3\\textsuperscript{e} jaar, 1\\textsuperscript{ste} semester (Lahti University of Applied Sciences)"
+            ]
+        },
+        {
+            "institution": "Katholieke Universiteit Leuven",
+            "title": "Academische Bachelor in de Economische Wetenschappen **(diploma niet behaald)**",
+            "location": "Leuven, België",
+            "period": "2014 - 2017"
+        },
+        {
+            "institution": "Wisbygymnasiet",
+            "title": "Samhällsvetenskapsprogrammet (uitwisselingsjaar)",
+            "location": "Visby, Zweden",
+            "period": "2013 - 2014"
+        },
+        {
+            "institution": "MSV De Zonnewijzer",
+            "title": "ASO, Steinerpedagogie",
+            "location": "Wijgmaal, België",
+            "period": "2007 - 2013"
+        }
+    ],
+    "experience": [
+        {
+            "institution": "ENPICOM B.V.",
+            "title": "Stagiair / Kubernetes developer",
+            "location": "'s-Hertogenbosch, Nederland",
+            "period": "16/03/2020 - heden",
+            "description": "Verbeteren van job scheduling in kubernetes",
+            "achievements": [
+                "Bestaande docker registry verplaatst van azure cloud naar google cloud met bash script",
+		        "Ontwikkelde een efficiënte kubernetes job scheduler voor speciale jobs"
+            ]
+        },
+        {
+            "institution": "Atmire NV",
+            "title": "Jobstudent / Java web developer",
+            "location": "Leuven, België",
+            "period": "21/06/2019 - 23/08/2019",
+            "description": "Ontwikkelen van REST API voor het DSpace open source project in Java (8) met Spring"
+        },
+        {
+            "institution": "SoundTalks NV",
+            "title": "Jobstudent / Python developer",
+            "location": "Haasrode, België",
+            "period": "2/07/2018 - 14/09/2018",
+            "description": "Ontwikkelen van een REST API in Python met Django REST framework en Docker",
+            "achievements": [
+                "Integreren van locust (stress tests) en websockets/MQTT (push berichten) in de REST API",
+                "Schrijven van een wrapper voor MongoDB voor verificatie van ingevoegde data met JSON schemas",
+                "Evaluatie (en implementatie) van externe API's voor intern gebruik"
+            ]
+        },
+        {
+            "institution": "Informatica Studentenwerking Leuven",
+            "title": "Penningmeester (Studentenvereniging)",
+            "location": "Haasrode, België",
+            "period": "Dec. 2017 - Feb. 2019",
+            "description": "Opvolgen financiën van studentenvereniging doorheen het academiejaar",
+            "achievements": [
+                "Programmeren van een systeem in python om maandelijkse facturen aan te maken en op te sturen",
+                "Organiseren en presenteren van meerdere workshops over game development in Python met PyGame"
+            ]
+        }
+    ], 
+    "skills": [
+        "Taalvaardig in het **Nederlands**, **Engels** en **Zweeds**, basiskennis van **Frans** en **Duits**",
+        "Softwareontwikkeling in **Python** (Django), **Java** (Spring Boot) en **Typescript** (Node.js), oppervlakkige kennis van **C\\#** en **C++**",
+        "Webontwikkeling in **HTML**, **CSS** en **Javascript**",
+        "Mobile development met **Android** en **Java**",
+        "Containerbeheer met **Kubernetes** en **Docker**",
+        "Softwareversiebeheer met **Git**",
+        "Vertrouwd met Linux-systemen (**Awk**, **shell scripting**, **Debian**)"
+    ]
+}
